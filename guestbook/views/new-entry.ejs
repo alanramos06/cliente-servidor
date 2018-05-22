@@ -1,0 +1,19 @@
+<% include %>
+<h2>Crea una nueva entrada</h2>
+<form method="post" role="form">
+    <div class="form-group">
+        <label for="title">Título</label>
+        <input type="text" class="form-control" id="title" 
+        name="title" placeholder="Escribe un título" required>
+    </div>
+    <div class="form-group">
+        <label for="body">Mensaje</label>
+        <textarea class="form-control" id="body" 
+        name="body" placeholder="Escribe un mensaje" rows="3" required>
+        </textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Aceptar" />
+    </div>
+</form>
+<% include footer %>
