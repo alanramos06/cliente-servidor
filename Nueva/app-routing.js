@@ -4,7 +4,7 @@ var http = require('http');
 
 var app = express();
 
-var IP_MALVADA = "127.12.25.45";
+var IP_MALVADA = "::1"; //"127.12.25.45"; //::1
 
 app.use((request, response, next) => {
     if(request.ip === IP_MALVADA){

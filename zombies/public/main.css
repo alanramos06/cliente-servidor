@@ -1,0 +1,38 @@
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+body{
+    margin: 0;
+    margin-bottom: 40px;
+    background-color: black;
+}
+
+table{
+    color: white;
+    text-align-last: center;
+    position: relative;
+}
+
+label{
+    color: white;
+}
+
+footer{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    height: 5%;
+    width: 100%;
+    background-color: white;
+}
+
+#footer{
+    font-size: 120%;
+}
+
+#link{
+    color: white;
+}
