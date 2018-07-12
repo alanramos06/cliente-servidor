@@ -24,15 +24,20 @@
                     <li>
                         <a href="/logout">Salir</a>
                     </li>
+                    <li>
+                        <a href="/registrarArmas">Registrar arma</a>
+                    </li>
+                    <li>
+                        <a>
+                            <%= currentZombie.rol() %>
+                        </a>
+                    </li>
                 <% } else { %>
                     <li>
                         <a href="/login">Entrar</a>
                     </li>
                     <li>
                         <a href="/signup">Registrarse</a>
-                    </li>
-                    <li>
-                        <a href="/registrarArmas">Registrar arma</a>
                     </li>
                 <% } %>
             </ul>
@@ -49,4 +54,3 @@
                 <%= info %>
             </div>
         <% }) %>
-        

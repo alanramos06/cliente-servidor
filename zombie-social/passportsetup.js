@@ -31,8 +31,8 @@ passport.use("login", new LocalStrategy(function(username, password, done){
             }else{
                 return done(null, false, {message: "La contraseña no es válida"})
             }
-        })
-    })
+        });
+    });
 }
 
 ))
