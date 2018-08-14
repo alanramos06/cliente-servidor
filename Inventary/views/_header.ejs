@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+            .header-bar{
+                font-size:200%;
+                margin-top: 10px;
+                margin-bottom: -35px;
+            }
+            .right-a{
+                font-size: 150%;
+                margin-top: -20px;
+            }
+        </style>
+    <title>Inventoryt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+</head>
+<body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="header-bar">
+                <a href="/">Inventory</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <% if(currentUser){%>
+                    <li>
+                        <a class="right-a" href="/edit">
+                            Welcome, <%= currentUser.name() %>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="right-a" href="/logout">Sign out</a>
+                    </li>
+                    <li>
+                        <a class="right-a">
+                            <%= currentUser.rol() %>
+                        </a>
+                    </li>
+                <% } else { %>
+                    <li>
+                        <a class="right-a" href="/login">Login</a>
+                    </li>
+                    <li>
+                        <a class="right-a" href="/signup">Signup</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <% errors.forEach(function(error) { %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% }) %>
+        <% infos.forEach(function(info) { %>
+            <div class="alert alert-info" role="alert">
+                <%= info %>
+            </div>
+        <% }) %>

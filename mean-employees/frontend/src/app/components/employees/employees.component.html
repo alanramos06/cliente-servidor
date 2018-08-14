@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="card">
+        <div class="card-content">
+          <form #employeeForm='ngForm' (ngSubmit)="addEmployee(employeeForm)">
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" name="name" #name='ngModel' [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Enter your name">
+              </div>
+              <div class="input-field col s12">
+                  <input type="text" name="poition" #position='ngModel' [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Enter your position">
+              </div>
+              <div class="input-field col s12">
+                  <input type="text" name="officw" #office='ngModel' [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Enter your office">
+              </div>
+              <div class="input-field col s12">
+                  <input type="text" name="salary" #salary='ngModel' [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Enter your salary">
+              </div>
+              <div class="card-action">
+                <div class="input-field col s12">
+                  <button class="btn right" style="margin-left: 2px" (click)="resetForm(employeeForm)">Clean</button>
+                  <button class="btn right">Save</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col s7">
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Operations</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employeeService.employees">
+            <td>{{employee.name}}</td>
+            <td>{{employee.position}}</td>
+            <td>{{employee.office}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

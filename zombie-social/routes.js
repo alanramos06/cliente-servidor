@@ -17,7 +17,7 @@ acl.config({
 router.use(acl.authorize);
 
 router.use((req, res, next) => {
-    res.locals.currentZombie = req.zombie;
+    res.locals.currentUser = req.zombie;
     res.locals.errors = req.flash("error");
     res.locals.infos = req.flash("info");
     if(req.isAuthenticated()){

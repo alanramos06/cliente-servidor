@@ -1,0 +1,9 @@
+<% include _header %>
+
+<% if((currentUser) && (currentUser.id === user.id)){ %>
+    <a href="/edit" class="pull-right">Edita tu perfil</a>
+<% } %>
+
+<h1><%= user.name() %></h1>
+
+<% include _footer %>

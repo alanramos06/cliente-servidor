@@ -1,0 +1,59 @@
+[{
+    "group": "Admin",
+    "permissions": [{
+        "resource": "*",
+        "methods": "*",
+        "action": "allow"
+    },
+    {
+        "resource": "/edit/:id",
+        "methods": "*",
+        "action": "allow"
+    }]
+},
+{
+    "group": "Superuser",
+    "permissions": [{
+        "resource": "/login",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/edit",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/logout",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/signup",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/turn/:id",
+        "methods": "*",
+        "action": "allow"
+    }]
+},
+{
+    "group": "user",
+    "permissions": [{
+        "resource": "/login",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/logout",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/signup",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    }]
+}]
