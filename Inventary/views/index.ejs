@@ -17,7 +17,7 @@
                   placeholder="Add a Description"
                   ></textarea>
               </div>
-              <button class="btn btn-primary" type="submit">
+              <button style="background-color: blue" class="btn btn-primary" type="submit">
                 Add
               </button>
             </form>
@@ -46,11 +46,11 @@
                   <a
                     class="<%= pieces[i].status ? 'btn btn-success' : 'btn btn-dark'%>"
                     href="/turn/<%= pieces[i]._id %>">There are pieces</a>
-                  <a href="/delete/<%= pieces[i]._id %>"
+                  <a style="background-color: red" href="/delete/<%= pieces[i]._id %>"
                     class="btn btn-danger">
                     Delete
                   </a>
-                  <a href="/edit/<%= pieces[i]._id %>" class="btn btn-info">
+                  <a style="background-color:cornflowerblue" href="/edit/<%= pieces[i]._id %>" class="btn btn-info">
                     Edit
                   </a>
                 </td>

@@ -56,4 +56,22 @@
         "methods": ["GET", "POST"],
         "action": "allow"
     }]
+},
+{
+    "group": "User",
+    "permissions": [{
+        "resource": "/login",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/logout",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    },
+    {
+        "resource": "/signup",
+        "methods": ["GET", "POST"],
+        "action": "allow"
+    }]
 }]

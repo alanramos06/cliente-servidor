@@ -11,6 +11,12 @@
                 font-size: 150%;
                 margin-top: -20px;
             }
+            #main{
+                background-color: #2471A3;
+            }
+            .body{
+                background-color:#95A5A6;
+            }
         </style>
     <title>Inventoryt</title>
     <meta charset="UTF-8">
@@ -19,33 +25,33 @@
     href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/main.css">
 </head>
-<body>
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
+<body class="body">
+    <div id="main" class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
             <div class="header-bar">
-                <a href="/">Inventory</a>
+                <a style="color:white" href="/">Inventory</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <% if(currentUser){%>
                     <li>
-                        <a class="right-a" href="/edit">
+                        <a style="color:black" class="right-a" href="/edit">
                             Welcome, <%= currentUser.name() %>
                         </a>
                     </li>
                     <li>
-                        <a class="right-a" href="/logout">Sign out</a>
+                        <a style="color:black" class="right-a" href="/logout">Sign out</a>
                     </li>
                     <li>
-                        <a class="right-a">
+                        <a style="color:black" class="right-a">
                             <%= currentUser.rol() %>
                         </a>
                     </li>
                 <% } else { %>
                     <li>
-                        <a class="right-a" href="/login">Login</a>
+                        <a style="color:black" class="right-a" href="/login">Login</a>
                     </li>
                     <li>
-                        <a class="right-a" href="/signup">Signup</a>
+                        <a style="color:black" class="right-a" href="/signup">Signup</a>
                     </li>
                 <% } %>
             </ul>
